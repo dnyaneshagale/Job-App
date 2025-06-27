@@ -18,7 +18,16 @@ public class Company {
     @OneToMany(mappedBy = "company")  // One company has many jobs
     private List<Job> jobs;
 
-    // private List<Review> reviews;
+    @OneToMany(mappedBy = "company")
+    private List<Review> reviews;
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
 
     public Company() {
     }
